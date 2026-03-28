@@ -1,0 +1,8 @@
+pocket-tts
+fastapi[standard]
+uvicorn
+scipy
+beautifulsoup4
+requests
+jinja2
+python-multipart
