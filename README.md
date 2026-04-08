@@ -182,6 +182,13 @@ Generate speech from text or a URL.
 }
 ```
 
+**Example `curl`:**
+```bash
+curl -X POST http://localhost:8000/generate \
+  -H "Content-Type: application/json" \
+  -d '{"text":"Pocket TTS Studio turns long-form text into local speech output.","voice":"alba"}'
+```
+
 ### `GET /voices`
 Returns available voice profiles.
 
@@ -214,6 +221,13 @@ Memory Footprint: ~1.2GB (model + voice cache)
 ```
 
 > **Industry Benchmark:** The average cloud TTS API processes at ~0.8–1.2x real-time with 200–500ms network overhead. Pocket TTS Studio achieves **2.5–4.0x real-time with zero network latency** on consumer hardware.
+
+## Operational Notes
+
+- The first request on a cold process includes model initialization, so latency is materially lower after the voice state cache is warm.
+- URL extraction works best for article-style pages with semantic HTML; highly dynamic sites, paywalled content, or heavy client-side rendering may require manual text input.
+- Long documents are chunked and concatenated into a final WAV, which preserves quality for offline generation but is not the same as true streaming playback.
+- The shipped interface is intentionally minimal: there is no authentication, persistence layer, or background job queue yet.
 
 ---
 
