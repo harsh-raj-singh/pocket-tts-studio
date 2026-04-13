@@ -317,4 +317,20 @@ The underlying TTS model is developed by [Kyutai Labs](https://kyutai.org) and s
 
 [Report Bug](https://github.com/harsh-raj-singh/pocket-tts-studio/issues) · [Request Feature](https://github.com/harsh-raj-singh/pocket-tts-studio/issues)
 
+---
+
+## Contributors
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/harsh-raj-singh">
+        <img src="https://avatars.githubusercontent.com/harsh-raj-singh" width="80px;" alt="Harsh Raj Singh"/><br />
+        <sub><b>Harsh Raj Singh</b></sub>
+      </a><br />
+      <sub>Creator & Maintainer</sub>
+    </td>
+  </tr>
+</table>
+
 </div>
